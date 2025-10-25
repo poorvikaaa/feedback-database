@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Feedback</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Submit Feedback</h1>
+    <form method="POST">
+      <label>Student Name:</label>
+      <input type="text" name="student_name" required><br>
+
+      <label>Email:</label>
+      <input type="email" name="student_email" required><br>
+
+      <label>Department:</label>
+      <select name="department" required>
+        <option></option>
+        {% for dept in departments %}
+          <option value="{{ dept.id }}">{{ dept.name }}</option>
+        {% endfor %}
+      </select><br>
+
+      <label>Teacher:</label>
+      <select name="teacher" required>
+        <option></option>
+        {% for teacher in teachers %}
+          <option value="{{ teacher.id }}">{{ teacher.name }}</option>
+        {% endfor %}
+      </select><br>
+
+      <label>Subject:</label>
+      <select name="subject" required>
+        <option></option>
+        {% for subject in subjects %}
+          <option value="{{ subject.id }}">{{ subject.name }}</option>
+        {% endfor %}
+      </select><br>
+
+      <label>Rating (1-5):</label>
+      <select name="rating" required>
+        <option></option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select><br>
+
+      <label>Comments:</label><br>
+      <textarea name="comments" rows="4" cols="40"></textarea><br>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+</body>
+</html>

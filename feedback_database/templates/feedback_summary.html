@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback_summary.css') }}">
+</head>
+<body>
+
+    <h2>Average Teacher Ratings</h2>
+
+    <table>
+        <tr>
+            <th>Teacher Name</th>
+            <th>Subject</th>
+            <th>Average Rating Out Of 5</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td>{{ row.teacher_name }}</td>
+            <td>{{ row.subject_name }}</td>
+            <td>{{ row.avg_percentage }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

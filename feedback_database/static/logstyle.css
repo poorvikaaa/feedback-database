@@ -1,0 +1,42 @@
+body {
+    background: #1E3A8A; /* Strong navy blue */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff; /* White container for contrast */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 400px;
+    text-align: center;
+}
+
+input, button {
+    margin: 30px 0;
+    width: 80%;
+    font-size: 20px;        /* Increase text size */
+    padding: 15px 30px;     /* Increase padding */
+    width: 90%;        
+    border-radius: 15px;
+}
+
+button {
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #163174; /* slightly darker on hover */
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}

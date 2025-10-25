@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page for 4th sem OTAS</title>
+    <style>
+        body {
+            background: #f5f8fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin: 15px 0;
+            width: 80%;
+            font-size: 16px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login page for 4th sem OTAS</h2>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <form method="POST">
+            <input type="text" name="year" placeholder="Year of passing out" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <link rel="stylesheet" href="{{ url_for('static', filename='logstyle.css') }}">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
