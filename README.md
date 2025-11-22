@@ -23,14 +23,12 @@ Authentication	        Flask-Login
 Server	          Flask Development Server
 Environment	            PostgreSQL
 
-⚙️ Installation & Setup
-      git clone https://github.com/<your-username>/<repo-name>.git
-      cd <repo-name>
-2️⃣ Create Virtual Environment
+
+ Create Virtual Environment
       python -m venv venv
       venv\Scripts\activate     # On Windows
       source venv/bin/activate  # On macOS/Linux
-3️⃣ Install Dependencies
+ Install Dependencies
       pip install -r requirements.txt
 
 
